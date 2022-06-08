@@ -4,17 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Dashboard</title>
+    <title>MyDashboard</title>
     <link rel="stylesheet" href="styles.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="icon" type="image/x-icon" href="./assets/logo.svg" />
   </head>
   <body>
     <div class="grid-container">
       <nav class="sidebar">
-        <div class="logo">DASHBOARD</div>
+        <div class="logo">
+          <img src="assets/logo.svg" alt="" />
+          <p>MYDASHBOARD</p>
+        </div>
         <div class="group1">
           <div class="menu-option">
             <img src="assets/home.svg" alt="" />
@@ -59,11 +64,11 @@
       </nav>
       <header class="header">
         <div class="left">
-          <img src="assets/magnify.svg" alt="search icon" />
+          <img class="clickable-icon" src="assets/magnify.svg" alt="search icon" />
           <input type="text" />
         </div>
         <div class="right">
-          <img src="assets/bell.svg" alt="bell icon" /> <img class="profile-pic" src="assets/user-profile.jpeg" alt="" />
+          <img class="clickable-icon" src="assets/bell.svg" alt="bell icon" /> <img class="profile-pic" src="assets/user-profile.jpeg" alt="" />
           <p>Johnson Duong</p>
         </div>
         <div class="left bottom">
@@ -79,25 +84,82 @@
       <main class="main-content">
         <h1>Your Projects</h1>
         <section class="projects">
-          <div class="project-card"></div>
-          <div class="project-card"></div>
-          <div class="project-card"></div>
-          <div class="project-card"></div>
-          <div class="project-card"></div>
-          <div class="project-card"></div>
+          <div class="project-card">
+            <p>Super Cool Project</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quibusdam aliquid incidunt, ex illo consequatur!</p>
+            <div class="icons"><img class="clickable-icon" src="assets/star.svg" alt="" /><img class="clickable-icon" src="assets/eye.svg" alt="" /><img class="clickable-icon" src="assets/fork.svg" alt="" /></div>
+          </div>
+          <div class="project-card">
+            <p>Less Cool Project</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quibusdam aliquid incidunt, ex illo consequatur!</p>
+            <div class="icons"><img class="clickable-icon" src="assets/star.svg" alt="" /><img class="clickable-icon" src="assets/eye.svg" alt="" /><img class="clickable-icon" src="assets/fork.svg" alt="" /></div>
+          </div>
+          <div class="project-card">
+            <p>Impossible App</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quibusdam aliquid incidunt, ex illo consequatur!</p>
+            <div class="icons"><img class="clickable-icon" src="assets/star.svg" alt="" /><img class="clickable-icon" src="assets/eye.svg" alt="" /><img class="clickable-icon" src="assets/fork.svg" alt="" /></div>
+          </div>
+          <div class="project-card">
+            <p>Easy Peasy App</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quibusdam aliquid incidunt, ex illo consequatur!</p>
+            <div class="icons"><img class="clickable-icon" src="assets/star.svg" alt="" /><img class="clickable-icon" src="assets/eye.svg" alt="" /><img class="clickable-icon" src="assets/fork.svg" alt="" /></div>
+          </div>
+          <div class="project-card">
+            <p>Ad Blocker</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quibusdam aliquid incidunt, ex illo consequatur!</p>
+            <div class="icons"><img class="clickable-icon" src="assets/star.svg" alt="" /><img class="clickable-icon" src="assets/eye.svg" alt="" /><img class="clickable-icon" src="assets/fork.svg" alt="" /></div>
+          </div>
+          <div class="project-card">
+            <p>Money Maker</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quibusdam aliquid incidunt, ex illo consequatur!</p>
+            <div class="icons"><img class="clickable-icon" src="assets/star.svg" alt="" /><img class="clickable-icon" src="assets/eye.svg" alt="" /><img class="clickable-icon" src="assets/fork.svg" alt="" /></div>
+          </div>
         </section>
         <h1>Announcements</h1>
         <section class="announcements">
-          <div class=""><h2>Site Maintenance</h2></div>
-          <div class=""><h2>Community Share Day</h2></div>
-          <div class=""><h2>Updated Privacy Policy</h2></div>
+          <div class="">
+            <h2>Site Maintenance</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem quod eius nobis?</p>
+          </div>
+          <div class="">
+            <h2>Community Share Day</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero suscipit sequi dolores?</p>
+          </div>
+          <div class="">
+            <h2>Updated Privacy Policy</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi deleniti quas atque!</p>
+          </div>
         </section>
         <h1>Trending</h1>
         <section class="trending">
-          <div>@billgates</div>
-          <div>@elonmusk</div>
-          <div>@jeffbezos</div>
-          <div>@timcook</div>
+          <div class="trending-card">
+            <img class="profile-pic" src="assets/dog1.jpeg" alt="" />
+            <div>
+              <p>@goodboy1</p>
+              <p>World Peace Builder</p>
+            </div>
+          </div>
+          <div class="trending-card">
+            <img class="profile-pic" src="assets/dog2.jpeg" alt="" />
+            <div>
+              <p>@goodboy2</p>
+              <p>Life Changing App</p>
+            </div>
+          </div>
+          <div class="trending-card">
+            <img class="profile-pic" src="assets/dog3.jpeg" alt="" />
+            <div>
+              <p>@goodboy3</p>
+              <p>Super Cool <applet></applet></p>
+            </div>
+          </div>
+          <div class="trending-card">
+            <img class="profile-pic" src="assets/dog4.jpeg" alt="" />
+            <div>
+              <p>@goodboy4</p>
+              <p>No Traffic Maker</p>
+            </div>
+          </div>
         </section>
       </main>
     </div>

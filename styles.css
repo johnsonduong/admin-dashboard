@@ -1,3 +1,5 @@
+/* Overall */
+
 * {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
@@ -20,6 +22,21 @@ body {
     margin: 0;
 }
 
+h1 {
+    font-size: var(--fontsize1);
+    margin: 2.5em 0 0 1em;
+    height: fit-content;
+}
+
+h2 {
+    font-size: var(--fontsize2);
+}
+
+.clickable-icon:hover {
+    cursor: pointer;
+
+}
+
 .grid-container {
     height: 100vh;
     background-color: var(--color4);
@@ -27,31 +44,51 @@ body {
     grid-template: 1fr 5fr / 1fr 4fr;
 }
 
+/* Sidebar */
+
 .sidebar {
     background-color: var(--color1);
     grid-area: 1 / 1 / 3 / 2;
-    padding: 1.5em;
+    padding: 1.5em 0;
     font-size: var(--fontsize1);
     color: var(--color4);
 }
 
-.group1 {
-    margin-bottom: 3em;
+.logo {
+    display: flex;
+    padding-left: 1.5em;
+    font-weight: bold;
+    gap: 0.5em;
+}
+
+.group1, .group2 {
+    margin-top: 3em;
 }
 
 .menu-option{
     display: flex;
+    padding-left: 1.5em;
+}
+
+.menu-option:hover {
+    cursor: pointer;
+    background-color: #1371a4;
 }
 
 .menu-option > img {
     margin-right: 0.7em;
 }
 
+/* Header */
+
 .header {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
     height: 10em;
-    margin: 1em;
+    margin: 1em 0;
+    /* position: sticky;
+    top: 0;
+    background-color: var(--color4); */
 }
 
 .left, .right {
@@ -63,6 +100,7 @@ body {
 .right {
     justify-content: flex-end;
     gap: 2em;
+    font-weight: bold;
 }
 
 .left.bottom {
@@ -88,6 +126,7 @@ input {
     border-radius: 2em;
     border: none;
     background-color: var(--color3);
+    padding-left: 15px;
 }
 
 button {
@@ -97,6 +136,12 @@ button {
     background-color: var(--color1);
     color: var(--color4);
     border: none;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #1371a4;
 }
 
 .profile-pic {
@@ -105,20 +150,13 @@ button {
     border-radius: 2em;
 }
 
+/* Main content */
+
 .main-content {
     background-color: var(--color3);
     display: grid;
-    grid-template: 1fr 5fr 1fr 5fr / 2.5fr 1fr;
-}
-
-h1 {
-    font-size: var(--fontsize1);
-    margin: 2.5em 0 0 1em;
-    height: fit-content;
-}
-
-h2 {
-    font-size: var(--fontsize2);
+    grid-template: 0.5fr 5fr 0.5fr 5fr / 2.5fr 1fr;
+    padding: 0 2em;
 }
 
 .projects > h1 {
@@ -131,17 +169,36 @@ h2 {
     padding: 1em;
     gap: 1em;
     font-size: var(--fontsize1);
-    grid-template-rows: repeat(3, 2fr);
+    grid-template-rows: repeat(3, 13em);
     grid-template-columns: repeat(2, 1fr);
 }
 
 .projects > .project-card {
     width: 1fr;
-    height: 1fr;
+    height: 10em;
     background-color: var(--color4);
+    padding: 1.5em;
     border-radius: 0.5em;
     box-shadow: 2px 2px 5px var(--shadow);
 }
+
+.projects > .project-card > p:nth-child(1) {
+    font-weight: bold;
+    color: black;
+}
+
+.projects > .project-card > p {
+    font-size: var(--fontsize2);
+    color: #626362;
+}
+
+.icons {
+    display: flex;
+    margin-top: 3em;
+    justify-content: flex-end;
+    gap: 1.5em;
+}
+
 
 .announcements > h1 {
     margin-bottom: 1em;
@@ -154,12 +211,22 @@ h2 {
     background-color: var(--color4);
     border-radius: 0.5em;
     box-shadow: 2px 2px 5px var(--shadow);
+    padding: 2em;
 }
 
 .announcements > div {
     display: flex;
     flex-direction: column;
-    padding: 2em;
+    padding: 1em 0;
+}
+
+.announcements > div:nth-child(1), .announcements > div:nth-child(2) {
+    border-bottom: solid #62636279 1px;
+}
+
+.announcements > div > p{
+    margin: 0;
+    color: #626362;
 }
 
 .trending > h1 {
@@ -168,13 +235,20 @@ h2 {
 }
 
 .trending {
-    height: calc(100%-1em);
+    height: 22em;
     margin: 1em;
+    padding: 2em;
     border-radius: 0.5em;
     background-color: var(--color4);
     box-shadow: 2px 2px 5px var(--shadow);
 }
 
-.trending > div {
-    padding: 2em;
+.trending-card {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.trending-card > div > p:nth-child(2){
+    color: #626362;
 }
