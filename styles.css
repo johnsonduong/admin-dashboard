@@ -54,6 +54,57 @@ body {
     margin: 1em;
 }
 
+.left, .right {
+    display: flex;
+    align-items: center;
+    padding: 0 3em;
+}
+
+.right {
+    justify-content: flex-end;
+    gap: 2em;
+}
+
+.left.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.left.bottom  > p{
+    margin: 0.2em;
+}
+
+.left.bottom p:nth-child(2) {
+    font-size: var(--fontsize1);
+    font-weight: bold;
+}
+
+input {
+    width: 40em;
+    height: 2em;
+    margin: 0 1.5em;
+    border-radius: 2em;
+    border: none;
+    background-color: var(--color3);
+}
+
+button {
+    border-radius: 2em;
+    width: 7em;
+    height: 3em;
+    background-color: var(--color1);
+    color: var(--color4);
+    border: none;
+}
+
+.profile-pic {
+    height: 3em;
+    width: 3em;
+    border-radius: 2em;
+}
+
 .main-content {
     background-color: var(--color3);
     display: grid;
