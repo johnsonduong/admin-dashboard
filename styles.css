@@ -30,8 +30,28 @@ body {
 .sidebar {
     background-color: var(--color1);
     grid-area: 1 / 1 / 3 / 2;
-    padding: 1em;
+    padding: 1.5em;
     font-size: var(--fontsize1);
+    color: var(--color4);
+}
+
+.group1 {
+    margin-bottom: 3em;
+}
+
+.menu-option{
+    display: flex;
+}
+
+.menu-option > img {
+    margin-right: 0.7em;
+}
+
+.header {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    height: 10em;
+    margin: 1em;
 }
 
 .main-content {
@@ -62,7 +82,6 @@ h2 {
     font-size: var(--fontsize1);
     grid-template-rows: repeat(3, 2fr);
     grid-template-columns: repeat(2, 1fr);
-    
 }
 
 .projects > .project-card {
